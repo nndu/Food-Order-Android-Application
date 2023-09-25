@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerAccountManagement">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/txtAccountManagement"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewCustomerAccountManagement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewCustomerAccountManagement"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCustomerAccountManagmentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/txtName"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCustomerAccountManagmentCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txtCity"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentName"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomerAccountManagmentName" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagementCity"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementCity"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentCity"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomerAccountManagmentCity" />
+
+            <Button
+                android:id="@+id/btnUpdateCustomerCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/btnUpdate"
+                app:layout_constraintBottom_toBottomOf="@+id/editCustomerAccountManagementCity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editCustomerAccountManagementCity"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/txtCustomerAccountManagmentPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/txtPhoneNumber"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentCity"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagementCity" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagmentPhone"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementPhone"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentPhone"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagementCity"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomerAccountManagmentPhone" />
+
+            <Button
+                android:id="@+id/btnUpdateCustomerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnUpdate"
+                app:layout_constraintBottom_toBottomOf="@+id/editCustomerAccountManagmentPhone"
+                app:layout_constraintStart_toStartOf="@+id/btnUpdateCustomerCity"
+                app:layout_constraintTop_toTopOf="@+id/editCustomerAccountManagmentPhone"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/txtCustomerAccountManagmentEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/txtEmail"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentPhone"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagmentPhone" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagmentEmail"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementEmail"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentEmail"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagmentPhone"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomerAccountManagmentEmail" />
+
+            <Button
+                android:id="@+id/btnUpdateCustomerEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnUpdate"
+                app:layout_constraintBottom_toBottomOf="@+id/editCustomerAccountManagmentEmail"
+                app:layout_constraintStart_toStartOf="@+id/btnUpdateCustomerPhone"
+                app:layout_constraintTop_toTopOf="@+id/editCustomerAccountManagmentEmail"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/txtCustomerAccountManagmentUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/txtUsername"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentEmail"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagmentEmail" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagementUsername"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementUsername"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/txtCustomerAccountManagmentUsername"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagmentEmail"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomerAccountManagmentUsername" />
+
+            <Button
+                android:id="@+id/btnUpdateCustomerUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/btnUpdate"
+                app:layout_constraintBottom_toBottomOf="@+id/editCustomerAccountManagementUsername"
+                app:layout_constraintStart_toStartOf="@+id/btnUpdateCustomerEmail"
+                app:layout_constraintTop_toTopOf="@+id/editCustomerAccountManagementUsername" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagementOldPassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementOldPassword"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editCustomerAccountManagementUsername"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagementUsername"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagementUsername" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagementNewPassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementNewPassword"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editCustomerAccountManagementOldPassword"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagementOldPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagementOldPassword" />
+
+            <EditText
+                android:id="@+id/editCustomerAccountManagementConfirmNewPassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintCustomerAccountManagementConfirmNewPassword"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editCustomerAccountManagementNewPassword"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagementNewPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagementNewPassword" />
+
+            <Button
+                android:id="@+id/btnUpdateCustomerPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnUpdate"
+                app:layout_constraintBottom_toBottomOf="@+id/editCustomerAccountManagementConfirmNewPassword"
+                app:layout_constraintStart_toStartOf="@+id/btnUpdateCustomerUsername"
+                app:layout_constraintTop_toTopOf="@+id/editCustomerAccountManagementConfirmNewPassword" />
+
+            <EditText
+                android:id="@+id/editDeleteCustomerAccount"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center|end"
+                android:hint="@string/hintDeleteAccount"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editCustomerAccountManagementConfirmNewPassword"
+                app:layout_constraintStart_toStartOf="@+id/editCustomerAccountManagementConfirmNewPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editCustomerAccountManagementConfirmNewPassword" />
+
+            <Button
+                android:id="@+id/btnDeleteCustomerAccount"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btnDeleteAccount"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editDeleteCustomerAccount"
+                app:layout_constraintEnd_toEndOf="@+id/btnUpdateCustomerPassword"
+                app:layout_constraintStart_toStartOf="@+id/btnUpdateCustomerPassword"
+                app:layout_constraintTop_toTopOf="@+id/editDeleteCustomerAccount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

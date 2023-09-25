@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountCreation">
+
+    <ImageView
+        android:id="@+id/imgAccountCreationLogo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/imgLogo"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewAccountCreation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kitchen_extras_right"
+        tools:ignore="ImageContrastCheck" />
+
+    <ScrollView
+        android:id="@+id/scrollViewAccountCreation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAccountCreationLogo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/radbtnCustomer"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/radbtnCustomer" />
+
+                <RadioButton
+                    android:id="@+id/radbtnRestaurant"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radbtnRestaurant" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editAccountCreationName"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintName"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/txtName"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationName"
+                app:layout_constraintStart_toStartOf="@+id/radioGroup"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationName" />
+
+            <EditText
+                android:id="@+id/editAccountCreationCity"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintCity"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationName"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationName" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtCity"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationCity"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationName"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationCity" />
+
+            <EditText
+                android:id="@+id/editAccountCreationPhone"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintPhoneNumber"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationCity"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationCity" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPhoneNumber"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationPhone"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationCity"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationPhone" />
+
+            <EditText
+                android:id="@+id/editAccountCreationEmailAddress"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintEmail"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationPhone"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationPhone" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtEmail"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationPhone"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationEmailAddress" />
+
+            <EditText
+                android:id="@+id/editAccountCreationUsername"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintUsername"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationEmailAddress" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtUsername"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationUsername"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationEmail"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationUsername" />
+
+            <EditText
+                android:id="@+id/editAccountCreationPassword"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintPassword"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationUsername"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationUsername" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPassword"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editAccountCreationPassword"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationUsername"
+                app:layout_constraintTop_toTopOf="@+id/editAccountCreationPassword" />
+
+            <EditText
+                android:id="@+id/editAccountCreationConfirmPassword"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hintConfirmPassword"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationPassword" />
+
+            <TextView
+                android:id="@+id/txtAccountCreationRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txtRestaurantDescription"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editAccountCreationConfirmPassword" />
+
+            <EditText
+                android:id="@+id/editRestaurantDescription"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/hintRestaurantDescription"
+                android:inputType="textMultiLine"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/editAccountCreationConfirmPassword"
+                app:layout_constraintStart_toStartOf="@+id/txtAccountCreationPassword"
+                app:layout_constraintTop_toBottomOf="@+id/txtAccountCreationRestaurant" />
+
+            <Button
+                android:id="@+id/btnAccountCreationCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/btnCreateAccount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editRestaurantDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
